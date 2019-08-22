@@ -114,6 +114,9 @@ collections:
     output: false
   content_blocks:
     output: false
+  onsite_group:
+    output: true 
+    permalink: /groups/:category/:slug
 
 defaults:
   - scope:
