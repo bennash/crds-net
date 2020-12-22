@@ -2,7 +2,7 @@ module.exports = [
   {
     name: "application",
     deps: ["vendor/jquery-3.3.1.min"],
-    files: []
+    files: ['components/gtag']
   },
   {
     name: "application_deferred",
