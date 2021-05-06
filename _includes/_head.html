@@ -98,17 +98,19 @@
   <!-- after -->
   <script> window.prerenderReady = true; </script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2977073-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-2977073-1');
+    gtag('config', 'G-6CY08JXS97');
+  </script>
+
   <script>
   var CRDS = window.CRDS || {};
-
-  // GOOGLE ANALYTICS
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-2977073-1');
-
-  // Tell GTM to not use Universal Analytics
-  window.dataLayer.push({"_event": "GtagWrapperIsActive", "gtagWrapperActive": true})
 
   CRDS.rollCall = {
     formUrl: '{{ site.ENV.ROLL_CALL_FORM_URL }}',
@@ -146,8 +148,6 @@
     }
   </script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2977073-1"></script>
-  
   {% include _gtm-head.html %}
   {% include _monetate-head.html %}
   {% include _facebook.html %}
