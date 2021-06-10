@@ -1,4 +1,19 @@
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CY08JXS97"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6CY08JXS97');
+
+    gtag('event', 'read_article', {
+      "author": {{ page.author.full_name }},
+      "title": {{ page | meta_title }}
+    }
+  </script>
+
   {% if site.jekyll_env == 'production' %}
     <script src="https://cmp.osano.com/6olYRSI8uN8V3oE3/ee6703e4-e14a-4e11-bf03-f5b7b37c7061/osano.js"></script>
   {% elsif site.jekyll_env == 'int' %}
@@ -98,18 +113,6 @@
   <!-- after -->
   <script> window.prerenderReady = true; </script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async
-    src="https://www.googletagmanager.com/gtag/js?id=UA-2977073-1"></script> -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CY08JXS97"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    // gtag('config', 'UA-2977073-1');
-    gtag('config', 'G-6CY08JXS97');
-  </script>
 
   <script>
   var CRDS = window.CRDS || {};
